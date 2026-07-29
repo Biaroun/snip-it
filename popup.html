@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Snip It</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img src="icons/icon32.png" alt="" />
+        <span>Snip It</span>
+      </div>
+      <button id="optionsBtn" class="icon-btn" title="Options">⚙️</button>
+    </header>
+
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Rechercher dans les notes…" />
+    </div>
+
+    <main id="list" class="list"></main>
+
+    <template id="noteTemplate">
+      <article class="note">
+        <p class="note-text"></p>
+        <div class="note-meta">
+          <a class="note-source" target="_blank" rel="noopener"></a>
+          <time class="note-date"></time>
+        </div>
+        <div class="note-actions">
+          <button class="copy-btn" title="Copier">📋</button>
+          <button class="delete-btn" title="Supprimer">🗑️</button>
+        </div>
+      </article>
+    </template>
+
+    <p id="empty" class="empty" hidden>
+      Aucune note pour l'instant. Sélectionne du texte sur une page, clic droit
+      → « Sauvegarder comme note ».
+    </p>
+
+    <footer class="footer">
+      <span id="count">0 note</span>
+      <div class="footer-actions">
+        <button id="exportBtn" class="link-btn">Exporter en Markdown</button>
+        <button id="clearBtn" class="link-btn danger">Tout effacer</button>
+      </div>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
