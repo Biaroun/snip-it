@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Snip It — Options</title>
@@ -9,22 +9,41 @@
     <div class="wrap">
       <header>
         <img src="icons/icon48.png" alt="" />
-        <h1>Snip It</h1>
+        <h1 data-i18n="optionsHeading">Snip It</h1>
       </header>
 
       <section class="card">
         <label class="row">
           <div>
-            <span class="label">Inclure la source</span>
-            <p class="hint">Enregistre le titre et l'URL de la page avec chaque note.</p>
+            <span class="label" data-i18n="languageLabel">Language</span>
+            <p class="hint" data-i18n="languageHint">
+              Choose the display language for the popup and menus.
+            </p>
+          </div>
+          <select id="language">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="card">
+        <label class="row">
+          <div>
+            <span class="label" data-i18n="includeSourceLabel">Include source</span>
+            <p class="hint" data-i18n="includeSourceHint">
+              Saves the page title and URL together with each note.
+            </p>
           </div>
           <input type="checkbox" id="includeSource" />
         </label>
 
         <label class="row">
           <div>
-            <span class="label">Notification de sauvegarde</span>
-            <p class="hint">Affiche un petit badge ✓ sur l'icône quand une note est enregistrée.</p>
+            <span class="label" data-i18n="notifyLabel">Save confirmation</span>
+            <p class="hint" data-i18n="notifyHint">
+              Shows a small ✓ badge on the icon whenever a note is saved.
+            </p>
           </div>
           <input type="checkbox" id="notifyOnSave" />
         </label>
@@ -33,16 +52,17 @@
       <section class="card">
         <div class="row">
           <div>
-            <span class="label">Toutes les notes</span>
-            <p class="hint" id="noteCount">0 note stockée localement</p>
+            <span class="label" data-i18n="allNotesLabel">All notes</span>
+            <p class="hint" id="noteCount">0 notes stored locally</p>
           </div>
-          <button id="clearAll" class="danger-btn">Tout effacer</button>
+          <button id="clearAll" class="danger-btn" data-i18n="clearAllBtn">Clear all</button>
         </div>
       </section>
 
-      <p id="saved" class="saved" hidden>Préférences enregistrées ✓</p>
+      <p id="saved" class="saved" hidden data-i18n="savedMsg">Preferences saved ✓</p>
     </div>
 
+    <script src="i18n.js"></script>
     <script src="options.js"></script>
   </body>
 </html>

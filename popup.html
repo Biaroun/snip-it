@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Snip It</title>
@@ -11,11 +11,11 @@
         <img src="icons/icon32.png" alt="" />
         <span>Snip It</span>
       </div>
-      <button id="optionsBtn" class="icon-btn" title="Options">⚙️</button>
+      <button id="optionsBtn" class="icon-btn" data-i18n-title="optionsTitle" title="Options">⚙️</button>
     </header>
 
     <div class="toolbar">
-      <input id="search" type="search" placeholder="Rechercher dans les notes…" />
+      <input id="search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Search notes…" />
     </div>
 
     <main id="list" class="list"></main>
@@ -28,25 +28,23 @@
           <time class="note-date"></time>
         </div>
         <div class="note-actions">
-          <button class="copy-btn" title="Copier">📋</button>
-          <button class="delete-btn" title="Supprimer">🗑️</button>
+          <button class="copy-btn"></button>
+          <button class="delete-btn"></button>
         </div>
       </article>
     </template>
 
-    <p id="empty" class="empty" hidden>
-      Aucune note pour l'instant. Sélectionne du texte sur une page, clic droit
-      → « Sauvegarder comme note ».
-    </p>
+    <p id="empty" class="empty" hidden></p>
 
     <footer class="footer">
-      <span id="count">0 note</span>
+      <span id="count">0 notes</span>
       <div class="footer-actions">
-        <button id="exportBtn" class="link-btn">Exporter en Markdown</button>
-        <button id="clearBtn" class="link-btn danger">Tout effacer</button>
+        <button id="exportBtn" class="link-btn" data-i18n="exportBtn">Export as Markdown</button>
+        <button id="clearBtn" class="link-btn danger" data-i18n="clearBtn">Clear all</button>
       </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>

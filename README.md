@@ -1,47 +1,60 @@
 # Snip It — Note Manager
 
-Extension Chrome (Manifest V3) qui permet de sélectionner du texte sur n'importe
-quelle page web, de le sauvegarder en un clic droit, puis de retrouver,
-rechercher et exporter ses notes.
+A Chrome extension (Manifest V3) that lets you select text on any web page,
+save it with a right-click, then find, search and export your notes later.
 
-## Fonctionnalités
+<p align="center">
+  <img src="screenshots/popup-en.png" alt="Snip It popup showing saved notes" width="280" />
+  <img src="screenshots/options-en.png" alt="Snip It options page with language switcher" width="380" />
+</p>
 
-- **Capture rapide** : sélectionne du texte → clic droit → *"Sauvegarder comme note"*.
-- **Popup** : liste des notes avec date, source (titre + lien vers la page d'origine),
-  recherche instantanée, copie dans le presse-papiers, suppression.
-- **Export Markdown** : télécharge toutes les notes sous forme de fichier `.md`.
-- **Options** :
-  - Inclure ou non le titre/URL de la source dans chaque note.
-  - Afficher (ou non) une confirmation visuelle à la sauvegarde.
-  - Effacer toutes les notes stockées.
-- **100% local** : les notes sont stockées avec `chrome.storage.local`, aucune
-  donnée n'est envoyée vers un serveur externe.
+## Features
 
-## Stack technique
+- **Quick capture**: select text → right-click → *"Save as note"*.
+- **Popup**: list of notes with date, source (page title + link back to it),
+  instant search, copy to clipboard, delete.
+- **Markdown export**: download all notes as a single `.md` file.
+- **Multi-language UI**: English by default, with a language switcher
+  (English / Français) in the options page — independent from the browser's
+  own language.
 
-- Manifest V3 (service worker, pas de background page persistante)
-- JavaScript vanilla, sans framework ni dépendance
+  <img src="screenshots/popup-fr.png" alt="Snip It popup in French" width="280" />
+- **Options**:
+  - Include or exclude the source title/URL in each note.
+  - Toggle a visual confirmation badge on save.
+  - Clear all stored notes.
+- **100% local**: notes are stored with `chrome.storage.local`, nothing is
+  sent to any external server.
+
+## Tech stack
+
+- Manifest V3 (service worker, no persistent background page)
+- Vanilla JavaScript, no framework or dependency
 - `chrome.contextMenus`, `chrome.storage`, `chrome.downloads`
+- Lightweight custom i18n layer (`i18n.js`) plus native `_locales` for the
+  Chrome Web Store listing (name/description)
 
-## Installation en local (mode développeur)
+## Local install (developer mode)
 
-1. Ouvrir `chrome://extensions` dans Chrome.
-2. Activer le **Mode développeur** (en haut à droite).
-3. Cliquer sur **Charger l'extension non empaquetée**.
-4. Sélectionner le dossier de ce projet.
+1. Open `chrome://extensions` in Chrome.
+2. Enable **Developer mode** (top right).
+3. Click **Load unpacked**.
+4. Select this project's folder.
 
-## Structure du projet
+## Project structure
 
 ```
-manifest.json      # configuration de l'extension
-background.js       # service worker : menu contextuel + sauvegarde des notes
-popup.html/.js/.css # interface de la popup (liste, recherche, export)
-options.html/.js/.css # page de préférences
-icons/               # icônes de l'extension (16/32/48/128 px)
+manifest.json         # extension configuration
+background.js         # service worker: context menu + note saving
+i18n.js                # shared EN/FR message dictionary + helpers
+popup.html/.js/.css   # popup UI (list, search, export)
+options.html/.js/.css # settings page (incl. language switcher)
+_locales/en, _locales/fr  # store-level localization (name, description)
+icons/                # extension icons (16/32/48/128 px)
 ```
 
-## Pistes d'évolution
+## Ideas for future improvements
 
-- Synchronisation entre appareils via `chrome.storage.sync`
-- Tags / catégories sur les notes
-- Raccourci clavier pour ouvrir la popup directement
+- Sync notes across devices via `chrome.storage.sync`
+- Tags / categories on notes
+- Keyboard shortcut to open the popup directly

@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Snip It — Note Manager",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDescription": {
+    "message": "Select text on any page, right-click, and save it as a note. Browse, search and export your notes as Markdown.",
+    "description": "Extension description shown in the Chrome Web Store."
+  }
+}

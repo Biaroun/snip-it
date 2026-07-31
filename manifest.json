@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Snip It — Note Manager",
-  "description": "Sélectionne du texte sur n'importe quelle page, clic droit, et sauvegarde-le comme note. Consulte, cherche et exporte tes notes en Markdown.",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
   "version": "1.0.0",
   "icons": {
     "16": "icons/icon16.png",

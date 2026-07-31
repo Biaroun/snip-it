@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Snip It — Gestionnaire de notes",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDescription": {
+    "message": "Sélectionne du texte sur n'importe quelle page, clic droit, et sauvegarde-le comme note. Consulte, cherche et exporte tes notes en Markdown.",
+    "description": "Extension description shown in the Chrome Web Store."
+  }
+}
