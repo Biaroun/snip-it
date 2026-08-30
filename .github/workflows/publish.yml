@@ -1,0 +1,42 @@
+name: Publish to Chrome Web Store
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Zip extension
+        run: |
+          zip -r extension.zip . \
+            -x ".git/*" \
+            -x ".github/*" \
+            -x "screenshots/*" \
+            -x "*.md" \
+            -x "*.zip" \
+            -x "store-listing-*.txt"
+
+      - name: Upload & publish to Chrome Web Store
+        run: |
+          npx chrome-webstore-upload-cli upload \
+            --source extension.zip \
+            --extension-id "$EXTENSION_ID" \
+            --client-id "$CLIENT_ID" \
+            --client-secret "$CLIENT_SECRET" \
+            --refresh-token "$REFRESH_TOKEN"
+          npx chrome-webstore-upload-cli publish \
+            --extension-id "$EXTENSION_ID" \
+            --client-id "$CLIENT_ID" \
+            --client-secret "$CLIENT_SECRET" \
+            --refresh-token "$REFRESH_TOKEN"
+        env:
+          EXTENSION_ID: ${{ secrets.EXTENSION_ID }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
