@@ -24,17 +24,8 @@ jobs:
 
       - name: Upload & publish to Chrome Web Store
         run: |
-          npx chrome-webstore-upload-cli upload \
-            --source extension.zip \
-            --extension-id "$EXTENSION_ID" \
-            --client-id "$CLIENT_ID" \
-            --client-secret "$CLIENT_SECRET" \
-            --refresh-token "$REFRESH_TOKEN"
-          npx chrome-webstore-upload-cli publish \
-            --extension-id "$EXTENSION_ID" \
-            --client-id "$CLIENT_ID" \
-            --client-secret "$CLIENT_SECRET" \
-            --refresh-token "$REFRESH_TOKEN"
+          npx chrome-webstore-upload-cli upload --source extension.zip
+          npx chrome-webstore-upload-cli publish
         env:
           EXTENSION_ID: ${{ secrets.EXTENSION_ID }}
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
