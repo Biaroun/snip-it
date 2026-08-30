@@ -1,0 +1,45 @@
+Snip It turns any web page into a source of notes. Highlight a sentence, a quote, a code snippet, a definition — right-click, and it's saved. No accounts, no cloud, no clutter. Just a fast way to capture what matters while you browse, and find it again later.
+
+WHY SNIP IT
+
+We take notes on the web constantly — copying quotes into random documents, screenshotting tweets, leaving fifteen tabs open "to remember." Snip It replaces all of that with one habit: select, right-click, save. Every note keeps a link back to where it came from, so you never lose the context.
+
+HOW IT WORKS
+
+1. Select any text on any web page.
+2. Right-click and choose "Save as note."
+3. Click the Snip It icon in your toolbar to see everything you've saved.
+
+That's the whole workflow. No sign-up, no setup screen, no permissions beyond what the extension actually needs.
+
+KEY FEATURES
+
+- One-click capture — save selected text straight from the right-click menu, from any site.
+- Automatic source tracking — each note keeps the page title and a link back to where you found it.
+- Instant search — filter through all your notes as you type, across text, title and URL.
+- Copy or delete in one click — hover any note to copy it to your clipboard or remove it.
+- Markdown export — download your entire note collection as a single, clean .md file, ready for Obsidian, Notion, or any text editor.
+- Bilingual interface — use Snip It in English or French, switchable anytime from the options page, independent of your browser's language.
+- Fully local & private — every note is stored on your device with Chrome's built-in storage. Snip It has no backend server, sends no data anywhere, and includes no analytics or trackers.
+- Lightweight — built with vanilla JavaScript and Manifest V3, no bloated frameworks, minimal permissions.
+
+WHO IT'S FOR
+
+- Researchers and students collecting quotes and references across many pages.
+- Writers gathering material and sources for an article.
+- Developers saving snippets, error messages, or documentation excerpts.
+- Anyone who's tired of losing good ideas in a pile of open tabs.
+
+PERMISSIONS, EXPLAINED
+
+- contextMenus — adds the "Save as note" option to your right-click menu.
+- storage — saves your notes and preferences locally on your device.
+- downloads — lets you export your notes to a Markdown file when you choose to.
+
+Snip It never requests access to the content of the pages you browse beyond the text you explicitly select and choose to save.
+
+OPEN SOURCE
+
+Snip It's full source code is public on GitHub: github.com/Biaroun/snip-it. Read it, audit it, or suggest improvements.
+
+Got feedback or a feature idea? Open an issue on the GitHub repository — this is a small, focused tool and it'll stay that way, but it keeps getting better.

@@ -1,0 +1,25 @@
+body.fullview {
+  width: auto;
+  max-width: 720px;
+  max-height: none;
+  height: 100vh;
+  margin: 0 auto;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+body.fullview .list {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+body.fullview .topbar,
+body.fullview .toolbar,
+body.fullview .footer {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+body.fullview .note-text {
+  font-size: 14px;
+}

@@ -1,0 +1,53 @@
+Sélectionne du texte sur n'importe quelle page, clic droit, et sauvegarde-le comme note. Consulte, cherche et exporte tes notes en Markdown — 100% local, sans compte.
+
+❓ POURQUOI SNIP IT
+On prend des notes sur le web en permanence — copier des citations dans des documents au hasard, faire des captures d'écran de tweets, laisser quinze onglets ouverts "pour se souvenir". Snip It remplace tout ça par une seule habitude : sélectionner, clic droit, sauvegarder. Chaque note garde un lien vers sa source, pour ne jamais perdre le contexte. 🔗
+
+🚀 COMMENT ÇA MARCHE
+Sélectionne n'importe quel texte sur n'importe quelle page web.
+
+Clic droit et choisis « Sauvegarder comme note ».
+
+Clique sur l'icône Snip It dans ta barre d'outils pour voir tout ce que tu as sauvegardé. 📋
+
+C'est tout le workflow. Pas d'inscription, pas d'écran de configuration, aucune permission au-delà de ce dont l'extension a réellement besoin.
+
+✨ FONCTIONNALITÉS CLÉS
+Capture en un clic — sauvegarde le texte sélectionné directement depuis le menu clic droit, sur n'importe quel site. ⚡
+
+Suivi automatique de la source — chaque note garde le titre de la page et un lien vers l'endroit où tu l'as trouvée.
+
+Recherche instantanée — filtre toutes tes notes en temps réel, dans le texte, le titre et l'URL. 🔍
+
+Copier ou supprimer en un clic — survole une note pour la copier dans le presse-papiers ou la supprimer.
+
+Export Markdown — télécharge toute ta collection de notes en un seul fichier .md propre, prêt pour Obsidian, Notion, ou n'importe quel éditeur de texte. 💾
+
+Interface bilingue — utilise Snip It en anglais ou en français, à changer à tout moment depuis la page des options. 🌍
+
+100% local et privé — chaque note est stockée sur ton appareil. Snip It n'a aucun serveur, n'envoie aucune donnée nulle part, et n'inclut aucun tracker. 🔒
+
+Léger — développé en JavaScript pur avec Manifest V3, sans framework superflu. 🪶
+
+🎯 POUR QUI
+Chercheurs et étudiants qui collectent citations et références sur de nombreuses pages. 🎓
+
+Rédacteurs qui rassemblent matière et sources pour un article. ✍️
+
+Développeurs qui sauvegardent des snippets, messages d'erreur ou extraits de documentation. 💻
+
+Toute personne fatiguée de perdre de bonnes idées dans une pile d'onglets ouverts.
+
+🛡️ PERMISSIONS EXPLIQUÉES
+contextMenus — ajoute l'option « Sauvegarder comme note » à ton menu clic droit.
+
+storage — sauvegarde tes notes et préférences localement sur ton appareil.
+
+downloads — te permet d'exporter tes notes en fichier Markdown.
+
+Snip It ne demande jamais accès au contenu des pages que tu visites au-delà du texte que tu sélectionnes et choisis explicitement de sauvegarder.
+
+🌐 OPEN SOURCE
+Le code source complet de Snip It est public sur GitHub : github.com/Biaroun/snip-it. Lis-le, audite-le, ou propose des améliorations. 🛠️
+
+Un retour ou une idée de fonctionnalité ? Ouvre une issue sur le dépôt GitHub — c'est un petit outil ciblé et ça le restera, mais il continue de s'améliorer.

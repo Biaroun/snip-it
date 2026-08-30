@@ -47,6 +47,33 @@
           </div>
           <input type="checkbox" id="notifyOnSave" />
         </label>
+
+        <label class="row">
+          <div>
+            <span class="label" data-i18n="highlightLabel">Highlight saved text</span>
+            <p class="hint" data-i18n="highlightHint">
+              Highlights the selected text on the page itself when you save a note.
+            </p>
+          </div>
+          <input type="checkbox" id="highlightEnabled" />
+        </label>
+
+        <label class="row">
+          <div>
+            <span class="label" data-i18n="highlightColorLabel">Default highlight color</span>
+          </div>
+          <input type="color" id="highlightColor" />
+        </label>
+
+        <div class="row" id="presetsRow">
+          <div>
+            <span class="label" data-i18n="presetsLabel">Preset colors</span>
+            <p class="hint" data-i18n="presetsHint">
+              Quick-pick colors shown in each note's color picker.
+            </p>
+          </div>
+          <div class="presets-grid" id="presetsGrid"></div>
+        </div>
       </section>
 
       <section class="card">

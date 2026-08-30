@@ -92,6 +92,30 @@ input[type="checkbox"] {
   flex-shrink: 0;
 }
 
+input[type="color"] {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.presets-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 120px;
+  flex-shrink: 0;
+}
+
+.presets-grid input[type="color"] {
+  width: 28px;
+  height: 28px;
+}
+
 .danger-btn {
   background: none;
   border: 1px solid var(--danger);
